@@ -1,5 +1,7 @@
 # compile a small kernel program
 
+Set up environment:
+
 ```bash
 # Install qemu
 sudo apt-get install qemu
@@ -11,12 +13,45 @@ wget https://raw.githubusercontent.com/mengning/mykernel/master/mykernel_for_lin
 # Uncompress the archive
 xz -d linux-3.9.4.tar.xz
 tar -xvf linux-3.9.4.tar
+```
+
+Patch mykernel:
+
+```bash
 # Patch mykernel
 cd linux-3.9.4
 patch -p1 < ../mykernel_for_linux3.9.4sc.patch
-# Compile mykernel
+```
+
+![](./1.png)
+
+Set compile config:
+
+```bash
+# Set compile config
 make allnoconfig
+```
+
+![](./2.png)
+
+Compile mykernel:
+
+```bash
+# Compile mykernel
 make
+```
+
+![](./3.png)
+
+Use qemu to start mykernel:
+
+```bash
 # Start mykernel os
 qemu -kernel arch/x86/boot/bzImage
 ```
+
+![](./4.png)
+
+Update a newer kernel:
+
+![](./5.png)

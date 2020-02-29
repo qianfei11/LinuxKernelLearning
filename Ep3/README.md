@@ -1,5 +1,11 @@
 # debug a small os
 
+Three important things of computer:
+
+- Von Neumann architecture
+- Functions of the call stack
+- Interrupt mechanism
+
 ```bash
 # Download kernel source && uncompress the archive
 wget https://mirrors.edge.kernel.org/pub/linux/kernel/v3.x/linux-3.18.6.tar.xz
