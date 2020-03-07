@@ -15,7 +15,7 @@ tar -xvf linux-3.18.6.tar
 cd linux-3.18.6
 make i386_defconfig
 make
-# Download menuOS
+# Download MenuOS
 cd .. && git clone https://github.com/mengning/menu.git
 # Compile init file
 cd menu
